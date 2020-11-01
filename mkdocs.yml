@@ -89,7 +89,10 @@ nav:
     - 考研: postgraduate/exam/exam.md
     - 出国: postgraduate/abroad/abroad.md
   - 工作:
-    - 介绍: job/job.md
+    - 联系方式: job/job.md
+    - 2020届:
+      - 美团 Web 前端开发: job/2020-meituan-web.md
+      - 腾讯后端开发: job/2020-tencent-backend.md
   - 比赛: 
     - 介绍: competition/competition.md
     - Apple WWDC Student Scholarship: competition/wwdc.md
