@@ -1,0 +1,1893 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
+    
+    
+      
+        <title>美团 Web 前端开发 - Guidepost</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19190aaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.24b84193.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Noto Sans",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="red">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Guidepost" class="md-header-nav__button md-logo" aria-label="Guidepost">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Guidepost
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              美团 Web 前端开发
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/HNU-CSEE-Nuwa/Guidepost/" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HNU-CSEE-Nuwa/Guidepost
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../intro/intro/" class="md-tabs__link">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../lecture/general/intro/" class="md-tabs__link">
+          课程
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../postgraduate/recommendation/recommendation/" class="md-tabs__link">
+          升学
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../job/" class="md-tabs__link md-tabs__link--active">
+          工作
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../competition/competition/" class="md-tabs__link">
+          比赛
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tips/tips/" class="md-tabs__link">
+          Tips
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Guidepost" class="md-nav__button md-logo" aria-label="Guidepost">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    Guidepost
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/HNU-CSEE-Nuwa/Guidepost/" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HNU-CSEE-Nuwa/Guidepost
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      简介
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="简介" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/intro/" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/how-to-commit/" class="md-nav__link">
+      贡献方法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      课程
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="课程" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        课程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      公共课程
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="公共课程" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        公共课程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/intro/" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/advanced-math/" class="md-nav__link">
+      高等数学A
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/linear-algebra/" class="md-nav__link">
+      线性代数A
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/physics/" class="md-nav__link">
+      普通物理A
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/physics-experiment/" class="md-nav__link">
+      普通物理实验A
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/english/" class="md-nav__link">
+      大学英语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/advanced-programming/" class="md-nav__link">
+      高等程序设计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/algorithm/" class="md-nav__link">
+      算法分析与设计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/data-structure/" class="md-nav__link">
+      数据结构
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/digital-circuits/" class="md-nav__link">
+      数字电路与逻辑设计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/discrete-mathematic/" class="md-nav__link">
+      离散数学
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/digital-system-experiment/" class="md-nav__link">
+      数字系统实验
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/programming-experiment/" class="md-nav__link">
+      程序设计实验
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/freshman-summer/" class="md-nav__link">
+      一年级夏季学期
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/general/sophomore-summer/" class="md-nav__link">
+      二年级夏季学期
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/cs/" class="md-nav__link">
+      选修课
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      计算机科学
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="计算机科学" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        计算机科学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/computer-system/" class="md-nav__link">
+      计算机系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/ai/" class="md-nav__link">
+      人工智能导论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/os/" class="md-nav__link">
+      操作系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/network/" class="md-nav__link">
+      计算机网络
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/compiler/" class="md-nav__link">
+      编译原理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/db/" class="md-nav__link">
+      数据库原理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/software-engineering/" class="md-nav__link">
+      软件工程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/computing-theory/" class="md-nav__link">
+      计算理论导论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/high-performance-computing/" class="md-nav__link">
+      高性能计算导论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/computing-methods/" class="md-nav__link">
+      计算方法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/computing-theory-op/" class="md-nav__link">
+      计算理论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/cloud-computing-technology/" class="md-nav__link">
+      云计算技术
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/social-network-analysis/" class="md-nav__link">
+      社交网络分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/ml/" class="md-nav__link">
+      机器学习
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/intelligent-processing-of-data/" class="md-nav__link">
+      数据智能处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/scientific-computing-visualization/" class="md-nav__link">
+      科学计算可视化
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/data-mining/" class="md-nav__link">
+      数据挖掘
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/routing-and-switching-technology/" class="md-nav__link">
+      路由与交换技术
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/distributed-and-cloud-computing-system/" class="md-nav__link">
+      分布式与云计算系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/computer-vision-system/" class="md-nav__link">
+      计算机视觉系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/software-design-patterns/" class="md-nav__link">
+      软件设计模式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/advanced-database-designing/" class="md-nav__link">
+      高级数据库设计
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/junior-summer/" class="md-nav__link">
+      三年级夏季学期
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/cs/" class="md-nav__link">
+      物联网工程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/cs/" class="md-nav__link">
+      智能科学与技术
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      信息安全 / 保密管理
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="信息安全 / 保密管理" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        <span class="md-nav__icon md-icon"></span>
+        信息安全 / 保密管理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/algorithm/" class="md-nav__link">
+      算法设计与分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/computer-network/" class="md-nav__link">
+      计算机网络
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/database-system/" class="md-nav__link">
+      数据库系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/security-system-experiment/" class="md-nav__link">
+      安全系统实验
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/information-security-mathematics-foundation/" class="md-nav__link">
+      信息安全数学基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/secrecy-technology-foundation-A/" class="md-nav__link">
+      保密技术基础A
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/cryptography/" class="md-nav__link">
+      密码学
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/network-security/" class="md-nav__link">
+      网络安全
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/information-system-security/" class="md-nav__link">
+      信息系统安全
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/information-hiding/" class="md-nav__link">
+      信息隐藏
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/software-security/" class="md-nav__link">
+      软件安全
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/information-security-engineering/" class="md-nav__link">
+      信息安全工程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/trusted-computing-system/" class="md-nav__link">
+      可信计算系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/information-content-security/" class="md-nav__link">
+      信息内容安全
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/the-classified-information-system-management/" class="md-nav__link">
+      涉密信息管理系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/secrecy-technology-foundation-B/" class="md-nav__link">
+      保密技术基础B
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/introduction-to-secrecy-management/" class="md-nav__link">
+      保密管理概论
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/secrecy-law/" class="md-nav__link">
+      保密法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/secrecy-history-and-secrecy-system/" class="md-nav__link">
+      保密史与保密制度
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/machine-learning/" class="md-nav__link">
+      机器学习
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/data-mining/" class="md-nav__link">
+      数据挖掘
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/is/biological-information-science/" class="md-nav__link">
+      生物信息学
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/cs/" class="md-nav__link">
+      通信工程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/cs/" class="md-nav__link">
+      软件工程
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lecture/cs/cs/" class="md-nav__link">
+      数字媒体技术
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      升学
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="升学" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        升学
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      推研
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="推研" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        推研
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../postgraduate/recommendation/recommendation/" class="md-nav__link">
+      介绍
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../postgraduate/recommendation/thu-cs/" class="md-nav__link">
+      清华计科
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../postgraduate/recommendation/pku-eecs/" class="md-nav__link">
+      北大信科
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../postgraduate/recommendation/pku-ss/" class="md-nav__link">
+      北大软微
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../postgraduate/recommendation/contact/" class="md-nav__link">
+      联系方式
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../postgraduate/exam/exam/" class="md-nav__link">
+      考研
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../postgraduate/abroad/abroad/" class="md-nav__link">
+      出国
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      工作
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="工作" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        工作
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../job/" class="md-nav__link">
+      联系方式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-2">
+      2020届
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2020届" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        2020届
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        美团 Web 前端开发
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      美团 Web 前端开发
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    美团 Web 前端开发
+  </a>
+  
+    <nav class="md-nav" aria-label="美团 Web 前端开发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    个人经历
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    经验教训
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    关键节点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    心得
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2020-tencent-backend.md" class="md-nav__link">
+      腾讯后端开发
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      比赛
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="比赛" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        比赛
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../competition/competition/" class="md-nav__link">
+      介绍
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../competition/wwdc/" class="md-nav__link">
+      Apple WWDC Student Scholarship
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Tips
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tips" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Tips
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tips/tips/" class="md-nav__link">
+      介绍
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tips/macos/" class="md-nav__link">
+      MacOS 解决方案
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    美团 Web 前端开发
+  </a>
+  
+    <nav class="md-nav" aria-label="美团 Web 前端开发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    个人经历
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    经验教训
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    关键节点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    心得
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/HNU-CSEE-Nuwa/Guidepost/edit/main/docs/job/2020-meituan-web.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>美团 Web 前端开发</h1>
+                
+                <h2 id="web">美团 Web 前端开发<a class="headerlink" href="#web" title="Permanent link">&para;</a></h2>
+<p>我是2021届信息安全专业的同学，校招时投递的岗位是web前端开发，大三暑假在贝壳找房实习，最后秋招时签约了美团，大约在9月下旬结束了自己大学的找工作之路。相比较来说，我的秋招结束的还算早，上半年找实习的春招加上下半年的秋招，总计大概面试30多场，大部分都是视频面试，少部分电话。</p>
+<p>我在下面详细描述了我整个找工作的经历和过程，（有点长，不想看又臭又长的剧情的同学可以直接看经验教训！）我有很多做得好的地方，也有很多有遗憾的地方，希望能给大家带来一些帮助～ 因为我主要是做前端方向，可能一些技术方面以及面试问题技巧总结方面会比较有偏向性，想要投递前端开发岗的同学可以作为参考，但其他岗位因为了解的也不是很多，学弟学妹可以自行判断一下是否适用。</p>
+<h3 id="_1">个人经历<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>关于个人经历，我决定从最最最开始讲起。</p>
+<p>从<strong>大二</strong>开始，我就思考过自己的职业规划，也有因为不知道之后能干什么而苦恼，因为本身的专业是信息安全，所以在做安全还是做开发之间不断动摇。最后在大二快结束的时候，决定了要做前端开发。</p>
+<p><strong>大三上</strong>，我就正式开始了我的找工作准备。</p>
+<p>因为之前也没有什么基础，就从最基础的html、css开始学，看网站、动手练习、写静态页面，也有模仿过淘宝的首页，完全自己用原生来写。后面就开始学习JavaScript，JavaScript是作为前端开发工程师最基础也是必须掌握牢固的语言，无论后面学什么框架，底层基础都是一样的。最初通过网站来一点点看js的基础，边看边练，很枯燥而且记不住，看过就忘，当时也很焦虑很苦恼，看似学了很多时间，实则也都只是皮毛。这个时候大概到了<strong>11月左右</strong>的样子，这时候刚好有一个课设需要写系统，这就成了我的第一个练手小项目。因为只有想到12月要面试找寒假实习才会觉得着急和有压力，所以这几个月其实一直处于松松散散的学习状态，不着急也不抓紧，完全没有意识到事情的严重性。</p>
+<p><strong>到了12月</strong>，我迎来了人生中第一次工作面试，是学长帮忙内推的深信服电话面试。第一次面试的紧张相信大家也都能想象的到，慌乱，大脑一片空白，本来就不会啥，那会更不会了，大概一半的问题都只能说不知道没听过。现在回想其实都是一些非常基础的知识点，但第一次面试就这样在不知道不了解中结束了，当时真的菜的真实，当然，无后续。</p>
+<p>转眼就<strong>寒假</strong>了，大过年的怎么会学习呢？吃吃喝喝到了年后，疫情爆发了，那段全国人民都百无聊赖的日子，我拿着一本讲DOM的小书，边看边做，但效率极低，学习两分钟玩手机两小时，磨叽了一个多月才差不多看完，这个时候2月已经过完了。3月初我看到了阿里钉钉的实习生招聘，才发现，春招居然这么早？！ 真的想打死2月的自己..</p>
+<p><strong>3月中起</strong>，就开始了我长达两个月的春招，这是我找工作过程中最艰难的一段日子，大三下的课业非常重，每周都有大实验，导致春招就更艰难了。当时的水平真的菜的不行，js的语法都用的不熟练，而且因为是视频面试，所以90%的时候会被要求在线coding，加上面试覆盖面广，自己的基础又很薄弱，没有实践经验，所以开始的情况惨不忍睹，心理和生理的压力都很大。</p>
+<p>80%公司都有笔试环节，不同的公司笔试刷人程度不同，为了应对笔试和在线coding环节，我也有去leetcode刷题，加上ccf的编程基础，笔试环节我基本没有挂过。但面试时的coding，前端经常会出一些场景题，所以我也专门去练习了很多js原生实现的情景题，比如轮播图等等。面试方面，只能每天刷面经，记录自己面试时候不会的地方，然后马上去看，最后总结记录，这一点真的非常重要，这才是能力提升的关键。牛客网真的是个好网！大家可以没事多看看，看看别人的经验和讨论，也能解决很多自己的问题。</p>
+<p>我<strong>3月中旬</strong>共投递了7家公司，都是大厂，大厂的流程一般都很慢，大概到了四月中旬才全部结束流程。这一个多月就一直处于白天面试、刷题刷面经总结、看书学习js，晚上笔试，自己也在这种高强度的面试准备中暴风成长。但是因为真的是太菜了，所以开始基本一面挂，而且因为一直想着等这几家面完再继续投，导致错过了很多中厂的面试高峰期，<strong>4月中</strong>继续投简历时，有的只赶上了末尾，有的已经错过了，看到越来越多的人春招上岸，4月是最焦虑的一段日子。</p>
+<p>投递简历距离面试邀约通常会隔着一段时间以及笔试，我的第二波面试高峰在<strong>五一之后</strong>，中间这半个月的空档我跟着视频和文档学了框架，通过正要参加的比赛实践了一下框架，加上上一段时间的技术积累，整体水平有了一个很大的提升，下一阶段的面试就情况好很多，暑期实习也是这段时间拿到的offer。</p>
+<p><strong>六月初</strong>就到北京去实习了，贝壳的这段实习真的非常有价值，完全不水，到了公司的第二周就开始上手项目了，一直在不断地实践不断地学习。因为是真正的参与到了工业界的开发中去，而且同事领导都非常nice，给了我很多帮助，所以学到了很多很多，也给秋招带来了很大的帮助。</p>
+<p>因为有了前面春招的沉淀和经验积累，加上实习的收获，大家很痛苦的秋招对我来说结束的还算比较快。秋招的简历大概是<strong>8月末</strong>的时候投的，而且只投了几家比较想去的大厂，九月中从实习离职，<strong>九月下旬</strong>就结束了秋招。最后选择了美团。</p>
+<h3 id="_2">经验教训<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>万事赶早，早早就开始准备一定没错！</strong></li>
+<li><strong>找工作的第一步是确定自己的方向</strong>，不知道自己可以干什么的同学，我推荐大家可以去企业校招的官网看看，看看企业都在招聘什么岗位，岗位的要求是什么样的，这些要求就是自己需要去学习掌握的东西。校招官网就直接百度搜“XXX校园招聘”。</li>
+<li><strong>关于前端知识体系的学习</strong>，我认为自己的学习方式并不是很好，首先基础打得并不是很牢固，后面面试的过程中通过知识点的形式在查缺补漏，这样就会导致整个知识面都是散的，并不成体系，所以现在我也在继续看书继续学习，去构建自己的知识体系网。如果大三才开始零基础准备这些的话，可能上面这种是应对面试最好的方法，因为真的时间紧迫，但如果是从大二就开始准备的话，我建议首先完全可以稳一点，可以慢一点，但是要牢固一点，其次就是看书真的比看网站有用的多，js推荐去看红宝书和《你不知道的javascript》，再有就是多动手，多找项目做做。</li>
+<li><strong>大三下的春招非常非常重要（3月就开始了！）</strong>，一方面可以积累面试经验，提升自己的能力，另一方面找一个暑假实习会让你的秋招更加顺利。就算没有找到实习，春招就像是秋招的一次预演，经验满满的你会比直接参加秋招的同学更有能力，也更有信心！</li>
+<li><strong>参加校招是一定要做一些初始准备的</strong>，首先一份合格的简历非常重要，可以多去知乎百度看看简历到底要怎么写，我一直在用超级简历这个网站来做简历，自己用心花时间写一份高质量的简历非常有必要。（btw，现在大厂的招聘确实很看重学校，但湖大的本科不会被国内任何一家公司因为学校而筛掉，大家要有信心~ ）其次面试时的仪表、言语、态度都是非常重要的，要保证自己干净整洁，女孩子最好化淡妆，言语要礼貌谦逊，尽量给面试官留下一个好印象，很加分的。再有就是一些自我介绍、面试常见综合素质问题的准备了。</li>
+<li><strong>关于投简历</strong>，要经常看牛客，掌握公司们的动向，不要错过最佳的投递时间，这里有三点建议给到大家：一是不要想着等已经投了的面完再投下一波，这样会错过很多很好的机会（比如我的春招）；二是投简历要尽早，中前期的面试难度更小一点，后期hc少投的人多，不要总觉得自己还没准备好，你永远都不会觉得自己准备好，等你准备好offer都被人抢走啦！三是不要错过秋招的提前批，我就是因为实习加上比赛，提前批只投了一家，基本错过，很可惜的，如果在实习的话，一定要记得一直关注着秋招的动态。</li>
+<li><strong>面经的总结是自身能力提升的关键</strong>，每次面试完后，要及时记录被问到的不会的问题，马上搞懂，查缺补漏，这样才能避免下次又被问到结果又不会的情况。多看别人的面经，自己多总结，多刷题练习动手能力，再加上主动的系统的学习，你一定可以的！</li>
+<li><strong>找工作真的是一件搞心态的事情</strong>，一方面是不断地面一家挂一家，逐渐丧失信心，时间一点点过去但自己还没有任何结果；另一方面是面试等结果等oc真的很难熬，我也有过所有面都顺利面完，本来以为稳了结果一查还是面试不通过，心态爆炸压力巨大，大家要做好准备。很少很少很少有人投一家中一家，大家都是在失败中摸爬滚打过来的，要相信自己，只要自己不断地努力没有懈怠，命运总会给你一个最好的安排的！</li>
+<li><strong>线下宣讲和网申可以看自己的情况参加</strong>，就我自己而言，我并没有参加过线下的宣讲，因为我是九月中旬实习离职返校，这段时间已经在面试了，回来之后没多久就定下来了，所以后面的宣讲会我也没有参加过。但是就我的了解来说，线下宣讲会的笔面试可能会相对来说更容易一点，大家想参加的话可以多留意宣讲信息，但是一些一二线的大厂可能很少或者很晚才会到学校里面来宣讲面试，如果想去大厂的话，可能更多地要靠自己来网申了，网申也推荐大家尽量去牛客上面找人内推，内推的好处：可以指定到部门、能查进度、免简历筛选/优先筛选/免笔试。</li>
+<li><strong>暑期实习真的稳赚不赔！</strong>希望大家都能在春招的时候努努力，找到一份还不错的暑假实习，进入公司的实习能非常迅速的全方位提升你的能力，你能真实的感受到，工作了到底是什么样子的，为秋招打下坚实的基础，增加竞争力。同时很多实习有转正的机会，到时候手里又能多一个offer傍身，或者如果实习的过程中感觉非常好，想留下来的话也很不错啊，就直接不用参加秋招了 ~</li>
+</ul>
+<h3 id="_3">关键节点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>以下时间节点是以2020年的招聘形式为基础，可能受疫情的影响与往年有一些不同，大家可以参考一下。</p>
+<table>
+<thead>
+<tr>
+<th align="center">时间点</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>大三上的寒假之前<br/>（最好大二开始）</strong></td>
+<td>为了找工作而开始储备知识，积累项目，准备简历上可以写的东西。</td>
+</tr>
+<tr>
+<td align="center"><strong>大三上寒假</strong></td>
+<td>如果可以的话，找一份寒假实习，春招很加分，但如果没有的话也不影响后续，不要荒废时间就好。</td>
+</tr>
+<tr>
+<td align="center"><strong>寒假过后/寒假中<br/>（通常&#8532;月）</strong></td>
+<td>开始春招，各大公司开始暑期实习生招聘。</td>
+</tr>
+<tr>
+<td align="center"><strong>&#8538;/7月</strong></td>
+<td>开始暑期实习。<br/>（具体时间得看自身情况，实习最好在两三个月以上，太短了学不到太多东西。）</td>
+</tr>
+<tr>
+<td align="center"><strong>7月</strong></td>
+<td>秋招提前批开始。</td>
+</tr>
+<tr>
+<td align="center"><strong>8月中下旬</strong></td>
+<td>秋招正式批开始。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">心得<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>想要在校招过程中拿到一个好的结果，我认为主要是<strong>实力+运气+机会</strong>。想要进大厂肯定是需要一定的实力的，大厂的面试还是很严格的，尤其是想去AT的话，更是需要长期准备和积累才能达到的水平。前端的知识体系真的太过庞大了，感觉自己目前也只算个入门阶段，所以现在也在不断地继续学习，继续提升。其次运气在校招过程中也占了很大一部分，可能恰好就和面试官比较聊得来，问的方向也很对口，那结果就会很不错，同样也可能非常不对口，答的很艰难最后还是挂掉。我面美团的时候就运气比较好，主管面的时候和主管比较聊得来，最后给了一个比较高的评级，相信大家也都会有运气加成的！最后就是机会也很重要，要自己去主动争取所有可能的机会，掌握好投递简历的时机，成功的几率也会upup！</p>
+<p>只要大家早早开始，用心准备，找工作也没有想象中那么难，只是要做好打一场硬仗的准备。我也只是找工作大军中的一个普通人，所以我的经验可能也会适用于大多数人，希望能给看到我这篇帖子的学弟学妹们带来一点点帮助，也希望大家在校招中都能有一个出乎意料的完美结果！</p>
+<blockquote>
+<p>我所写的这些也都是根据我自己的经验总结出来的，有些地方可能比较主观，大家可以理性参考，有什么问题也可以联系我的qq:2268971074，有空的话都会尽可能的解答 ~</p>
+</blockquote>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      最后更新: 2020-11-01
+    
+  </small>
+</div>
+                  
+                
+              
+              
+<h2 id="__comments"></h2>
+<form id="gitalk-form" onsubmit="return false;">
+    <div id="gitalk-container"></div>
+</form>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://cdnjs.loli.net/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '16c34b0f1374a3850a65', // add yourself's
+        clientSecret: '0bfc2bfa7c85690e0706ecd6692ded41244f7761', // add yourself's
+        repo: 'comment',
+        owner: 'HNU-CSEE-Nuwa',
+        admin: ['HNU-CSEE-Nuwa'],
+        id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../job/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                联系方式
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../competition/competition/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                介绍
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
